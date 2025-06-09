@@ -36,67 +36,79 @@
       margin: auto;
     }
 
+    .card-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .card {
-      background-color: #1e1e1e;
+      background-color: rgba(30, 30, 30, 0.8);
       padding: 25px;
       border-radius: 12px;
       margin-bottom: 40px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
+      transition: transform 0.3s, background-color 0.3s, backdrop-filter 0.3s;
+      flex: 1 1 300px;
+      max-width: 350px;
+      position: relative;
+      color: #cccccc;
+      overflow: hidden;
+      backdrop-filter: none;
     }
 
     .card:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(255, 204, 0, 0.4);
+      color: #fff;
     }
 
     .card h3 {
       color: #ffcc00;
       margin-top: 0;
+      font-size: 1.4em;
     }
 
     .card p, .card ul {
-      color: #cccccc;
+      font-size: 0.9em;
+      line-height: 1.4;
+      color: inherit;
     }
 
     .card ul {
       padding-left: 18px;
-      font-size: 0.95em;
+      margin-bottom: 15px;
     }
 
     .card ul li {
       margin: 6px 0;
     }
 
-    .scripts h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.2em;
-      color: #ffffff;
-    }
-
-    .contact {
-      text-align: center;
+    .trial-contact {
+      font-size: 0.8em;
+      color: #ffd633;
       margin-top: 20px;
+      text-align: center;
     }
 
-    .contact p {
-      font-size: 1.1em;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    .contact a {
+    .trial-contact a {
+      display: inline-block;
+      margin-top: 6px;
       background-color: #ffcc00;
       color: #121212;
       text-decoration: none;
-      padding: 12px 24px;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s;
+      padding: 8px 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
     }
 
-    .contact a:hover {
+    .trial-contact a:hover {
       background-color: #e6b800;
+      color: #000;
     }
 
     footer {
@@ -126,77 +138,78 @@
   </header>
 
   <section>
-    <div class="card">
-      <h3>🤖 Kod Paylaşım Botu (VIP Paket)</h3>
-      <p>
-        Telegram gruplarına özel, otomatik çalışan profesyonel promosyon botu ile tanış!
-      </p>
-      <ul>
-        <li>✅ Otomatik Promosyon Kodu Paylaşımı</li>
-        <li>🛡️ Spam ve reklam engelleme sistemi</li>
-        <li>🔁 Aynı kodu tekrar etmez – tekrar gelen mesajları filtreler</li>
-        <li>📱 “Tıkla-Kopyala” şeklinde mobil uyumlu paylaşım</li>
-        <li>🔗 Yan gruplara (davet linkiyle) eş zamanlı paylaşım desteği</li>
-        <li>🆓 1 Günlük ücretsiz deneme – risksiz test et!</li>
-        <li>⚙️ Kişiselleştirme, hız ayarı ve özel filtreler opsiyonu</li>
-        <li>🖥️ VDS sunucuda 7/24 çalışır, size 5 kişilik iş gücü sağlar</li>
-      </ul>
-      <p><strong>💎 Full Paket (VIP): 5000₺</strong></p>
+    <div class="card-container">
+      <div class="card">
+        <h3>🤖 Kod Paylaşım Botu (VIP Paket)</h3>
+        <p>
+          Telegram gruplarına özel, otomatik çalışan profesyonel promosyon botu ile tanış!
+        </p>
+        <ul>
+          <li>✅ Otomatik Promosyon Kodu Paylaşımı</li>
+          <li>🛡️ Spam ve reklam engelleme sistemi</li>
+          <li>🔁 Aynı kodu tekrar etmez – tekrar gelen mesajları filtreler</li>
+          <li>📱 “Tıkla-Kopyala” şeklinde mobil uyumlu paylaşım</li>
+          <li>🔗 Yan gruplara (davet linkiyle) eş zamanlı paylaşım desteği</li>
+          <li>🆓 1 Günlük ücretsiz deneme – risksiz test et!</li>
+          <li>⚙️ Kişiselleştirme, hız ayarı ve özel filtreler opsiyonu</li>
+          <li>🖥️ VDS sunucuda 7/24 çalışır, size bir 5 iş gücü sağlar</li>
+        </ul>
+        <p><strong>💎 Fiyat: 5000₺</strong></p>
+
+        <div class="trial-contact">
+          🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:<br />
+          <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🚨 Otomatik Şikayet Çekip Paylaşma Botu</h3>
+        <p>
+          Şikayet var içerisindeki tüm belirlediğiniz kategorilerdeki şikayetleri çeker ve sizin telegram grubunuzda paylaşarak o firmaları aşağı çekip isterseniz kendi sponsorlarınızı öne çıkarabileceğiniz özelleştirilmiş bir sistem sunar.
+        </p>
+        <ul>
+          <li>⚙️ Otomatik şikayet algılama ve grubunuzda paylaşma</li>
+          <li>📬 Şikayet içeriğini ekran görüntüsü veya metin olarak aktarır</li>
+          <li>🔔 Şikayet içerisindeki görsel ve metinlerle birlikte paylaşır ve sizin belirlemek istediğiniz post stilinde</li>
+        </ul>
+        <p><strong>💰 Fiyat: 5000₺</strong></p>
+
+        <div class="trial-contact">
+          🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:<br />
+          <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🛡️ Otomatik Moderasyon & Sponsor Mesaj Çıkma Botu</h3>
+        <p>
+          Telegram grubunuzda sponsor mesajları, reklam içerikleri veya belirli anahtar kelimeleri içeren mesajları otomatik olarak tespit eder ve anında duyuru gruplarınızda paylaşır. Böylelikle sponsor gruplarınız hem hız kazanır hem sürekli takibe gerek kalmadan 7/24 sponsorlarınızın reklamları paylaşılır.
+
+        </p>
+        <ul>
+          <li>📌 Özel anahtar kelime listesi ile çalışır</li>
+          <li>🕒 Gerçek zamanlı mesaj denetimi (0.2sn gecikme)</li>
+        </ul>
+        <p><strong>💰 Fiyat: 8000₺</strong></p>
+
+        <div class="trial-contact">
+          🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:<br />
+          <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Özel Bot Geliştirme</h3>
+        <p>
+          İhtiyacınıza özel bot kodlanır ve teslim edilir. Projeniz için en uygun çözüm hızlıca hazırlanır.
+        </p>
+
+        <div class="trial-contact">
+          🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:<br />
+          <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
+        </div>
+      </div>
     </div>
-  </section>
-   <section class="contact">
-    <p>🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:</p>
-    <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
-  </section>
-
-  <section class="scripts">
-    <h2>📦 Diğer Yazılımlar</h2>
-
-    <div class="card">
-      <h3>🚨 Otomatik Şikayet Çekip Paylaşma Botu</h3>
-      <p>
-        Şikayet var içerisindeki tüm belirlediğiniz kategorilerdeki şikayetleri çeker ve sizin telegram grubunuzda paylaşarak o firmaları aşağı çekip isterseniz kendi sponsorlarınızı öne çıkarabileceğiniz özelleştirilmiş bir sistem sunar.
-      </p>
-      <ul>
-        <li>⚙️ Otomatik şikayet algılama ve grubunuzda paylaşma</li>
-        <li>📬 Şikayet içeriğini ekran görüntüsü veya metin olarak aktarır</li>
-        <li>🔔 Şikayet içerisindeki görsel ve metinlerle birlikte paylaşır ve sizin belirlemek istediğiniz post stilinde</li>
-      </ul>
-      <p><strong>💰 Fiyat: 5000₺</strong></p>
-    </div>
-     <section class="contact">
-    <p>🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:</p>
-    <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
-  </section>
-
-    <div class="card">
-      <h3>🛡️ Otomatik Moderasyon & Sponsor Mesaj Çıkma Botu</h3>
-      <p>
-        Telegram grubunuzda sponsor mesajları, reklam içerikleri veya belirli anahtar kelimeleri içeren mesajları otomatik olarak tespit eder ve anında duyuru gruplarınızda paylaşır. Böylelikle sponsor gruplarınız hem hız kazanır hem sürekli takibe gerek kalmadan 7/24 sponsorlarınızın reklamları paylaşılır.
-      </p>
-      <ul>
-        <li>📌 Özel anahtar kelime listesi ile çalışır</li>
-        <li>🕒 Gerçek zamanlı mesaj denetimi (0.2sn gecikme)</li>
-      </ul>
-      <p><strong>💰 Fiyat: 8000₺</strong></p>
-    </div>
-  </section>
-    <section class="contact">
-    <p>🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:</p>
-    <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
-  </section>
-
-  <div class="card">
-    <h3>⚙️ Özel Bot Geliştirme</h3>
-    <p>
-      İhtiyacınıza özel bot kodlanır ve teslim edilir. Projeniz için en uygun çözüm hızlıca hazırlanır.
-    </p>
-  </div>
-</section>
-
-  <section class="contact">
-    <p>🧪 Ücretsiz deneme talebi veya diğer tüm sorular için bizimle iletişime geçin:</p>
-    <a href="https://t.me/kendihalindegrafikci" target="_blank">📩 Telegram'dan Ulaş: @kendihalindegrafikci</a>
   </section>
 
   <footer>
